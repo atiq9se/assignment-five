@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+<body>
+
+    <section class="navbarSection lg:px-24 px-4 bg-slate-500">
+        <div class="flex justify-between flex-wrap">
+             <div class=""><a href="blog.html">Blog</a></div>
+             <div class="">Logo donation off the</div>
+             <div class="">Amount</div>
+        </div>
+        <div class="flex justify-center gap-4 py-6">
+            <button class="px-5 py-2 rounded border border-slate-400 active" id="donationBtn">Donation</button>
+            <button class="px-5 py-2 rounded border border-slate-400" id="historyBtn">History</button>
+        </div>
+        
+    </section>
+
+    <section class="lg:px-24 px-4 mt-12" id="donationList">
+        <div class="donationItem grid lg:grid-cols-2 gap-8 grid-cols-1 lg:p-6 p-2 border rounded border-gray-200">
+            <div>
+                <img src="images/donation1.png" alt="" class="w-full">
+            </div>
+            <div>
+                <p class="bg-base-300 py-2 px-5 w-36 rounded"><img src="images/coin.png" alt="" class="inline-block"> 5000 BDT</p>
+                <h3 class="text-3xl font-bold py-4">title</h3>
+                <p class="text-xl text-justify">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto nisi similique numquam, iste fugit ducimus, enim provident blanditiis id velit pariatur ut soluta, commodi voluptas dolore quod error labore aliquam.</p>
+                <input class="block w-full my-5 p-3 rounded border border border-gray-200" type="text" placeholder="Write donation amount">
+                <button class="px-5 py-2 w-full rounded border bg-lime-300 font-bold">Donation now</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="px-24 hidden mt-12" id="donationHistory">
+        <div class="p-4 border rounded border-gray-200 mt-3">
+            <h3 class="text-xl font-bold text-black"> 100 donated donation for Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni, tempora!</h3>
+            <p class="text-sm mt-2">Date: 12/12/23</p>
+        </div>
+        <div class="p-4 border rounded border-gray-200 mt-3">
+            <h3 class="text-xl text-black"> 100 donated donation for Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni, tempora!</h3>
+            <p class="text-sm text-gray">date: 12/12/23</p>
+        </div>
+        <div class="p-4 border rounded border-gray-200 mt-3">
+            <h3 class="text-xl"> 100 donated donation for Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni, tempora!</h3>
+            <p class="text-sm">date: 12/12/23</p>
+        </div>
+        <div class="p-4 border rounded border-gray-200 mt-3">
+            <h3 class="text-xl"> 100 donated donation for Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni, tempora!</h3>
+            <p class="text-sm">date: 12/12/23</p>
+        </div>
+    </section>
+
+   
+    <!-- accordian -->
+     <section class="py-7 px-24">
+        <div class="collapse collapse-arrow bg-base-200 mb-4">
+            <input type="radio" name="my-accordion-2" checked="checked" />
+            <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+            <div class="collapse-content">
+                <p>hello</p>
+            </div>
+        </div>
+        <div class="collapse collapse-arrow bg-base-200 mb-4">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+            <div class="collapse-content">
+                <p>hello</p>
+            </div>
+        </div>
+        <div class="collapse collapse-arrow bg-base-200 mb-4">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+            <div class="collapse-content">
+                <p>hello</p>
+            </div>
+        </div>
+        <div class="collapse collapse-arrow bg-base-200 mb-4">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+            <div class="collapse-content">
+                <p>hello</p>
+            </div>
+        </div>
+
+        <!-- Open the modal using ID.showModal() method -->
+        <button class="btn" onclick="my_modal_1.showModal()">open modal</button>
+        <dialog id="my_modal_1" class="modal">
+        <div class="modal-box">
+            <h3 class="text-lg font-bold">Hello!</h3>
+            <p class="py-4">Press ESC key or click the button below to close</p>
+            <div class="modal-action">
+            <form method="dialog">
+                <!-- if there is a button in form, it will close the modal -->
+                <button class="btn">Close</button>
+            </form>
+            </div>
+        </div>
+        </dialog>
+     </section>
+
+     <script>
+        document.getElementById('donationBtn').addEventListener('click', function(){
+            document.getElementById('donationList').style.display = "block";
+            document.getElementById('donationHistory').style.display = "none";
+        })
+        document.getElementById('historyBtn').addEventListener('click', function(){
+            document.getElementById('donationList').style.display = "none";
+            document.getElementById('donationHistory').style.display = "block";
+        })
+     </script>
+      
+</body>
+</html>

@@ -14,8 +14,3 @@
 .btnSection{
     background: #fff;
 }
-.modalShow{
-    pointer-events: auto;
-  visibility: visible;
-  opacity: 1;
-}

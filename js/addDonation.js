@@ -15,13 +15,11 @@ document.getElementById('noakhaliDonationBtn').addEventListener('click', functio
             const historyText= history(noakhaliInputMoney.toFixed(2), noakhaliTitle);
             document.getElementById('donationHistory').appendChild(historyText);
         }
-        my_modal_1.showModal()
-        return;
+        my_modal_1.showModal();
     }
     else{
-        alert('Invalid Donation amount')
-    }
-    
+        alert('Invalid Donation amount');
+    } 
 })
 
 document.getElementById('feniDonationBtn').addEventListener('click', function(){
@@ -41,10 +39,10 @@ document.getElementById('feniDonationBtn').addEventListener('click', function(){
             const historyText = history(feniInputMoney.toFixed(2), feniTitle);
             document.getElementById('donationHistory').appendChild(historyText);
         }
-        my_modal_1.showModal()
+        my_modal_1.showModal();
     }
     else{
-        alert('Invalid Donation amount')
+        alert('Invalid Donation amount');
     }
 })
 
@@ -65,9 +63,9 @@ document.getElementById('quotaDonationBtn').addEventListener('click', function()
             const historyText = history(quotaInputMoney.toFixed(2), quotaTitle);
             document.getElementById('donationHistory').appendChild(historyText);
         }
-        my_modal_1.showModal()
+        my_modal_1.showModal();
     }
     else{
-        alert('Invalid Donation amount')
+        alert('Invalid Donation amount');
     }
 })

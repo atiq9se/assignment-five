@@ -6,10 +6,8 @@
     <title>Assignment Five</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/responsive.css">
-
 </head>
 <body>
     <!-- NAVBAR SECTION -->
@@ -29,9 +27,7 @@
     <!-- DONATION SECTION -->
     <section class="lg:px-24 px-4 mt-12" id="donationList">
         <div class="donationItem grid lg:grid-cols-2 gap-8 grid-cols-1 lg:p-6 p-2 border rounded border-gray-200 my-4">
-            <div>
-                <img src="images/donation1.png" alt="" class="w-full">
-            </div>
+            <div><img src="images/donation1.png" alt="" class="w-full"></div>
             <div>
                 <p class="bg-base-200 py-2 px-5 w-48 rounded font-bold"><img src="images/coin.png" alt="" class="inline-block"> <span id="noakhaliBalance">55000</span> BDT</p>
                 <h3 class="text-2xl font-bold py-4" id="noakhaliTitle">Donate for Flood at Noakhali, Bangladesh</h3>
@@ -41,9 +37,7 @@
             </div>
         </div>
         <div class="donationItem grid lg:grid-cols-2 gap-8 grid-cols-1 lg:p-6 p-2 border rounded border-gray-200 my-4">
-            <div>
-                <img src="images/donation3.png" alt="" class="w-full">
-            </div>
+            <div><img src="images/donation3.png" alt="" class="w-full"></div>
             <div>
                 <p class="bg-base-300 py-2 px-5 w-48 rounded font-bold"><img src="images/coin.png" alt="" class="inline-block"> <span id="feniBalance">45000</span> BDT</p>
                 <h3 class="text-2xl font-bold py-4" id="feniTitle">Donate for Flood Relief in Feni,Bangladesh</h3>
@@ -53,9 +47,7 @@
             </div>
         </div>
         <div class="donationItem grid lg:grid-cols-2 gap-8 grid-cols-1 lg:p-6 p-2 border rounded border-gray-200 my-4">
-            <div>
-                <img src="images/donation2.png" alt="" class="w-full">
-            </div>
+            <div><img src="images/donation2.png" alt="" class="w-full"></div>
             <div>
                 <p class="bg-base-300 py-2 px-5 w-48 rounded font-bold"><img src="0" alt="" class="inline-block"><img src="images/coin.png" alt="" class="inline-block"> <span id="quotaBalance">75000</span> BDT</p>
                 <h3 class="text-2xl font-bold py-4" id="quotaTitle">Aid for Injured in the Quota Movement</h3>
@@ -70,31 +62,26 @@
     <!-- HISTORY SECTION -->
     <section class="lg:px-24 px-4 hidden mt-12" id="donationHistory">
       <h3 class="text-3xl font-bold">Donation History List</h3>
-        <!-- <div class="p-4 border rounded border-gray-200 mt-3">
-            <h3 class="text-xl font-bold text-black"> 100 donated donation for Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni, tempora!</h3>
-            <p class="text-sm mt-2">Date: 12/12/23</p>
-        </div> -->
     </section>
     <!-- HISTORY SECTION -->
 
-     <!-- Open the modal using ID.showModal() method -->
-        <!-- <button class="btn" onclick="my_modal_1.showModal()">open modal</button> -->
-        <dialog id="my_modal_1" class="modal">
-            <div class="modal-box text-center">
-                <h3 class="text-3xl font-bold mb-4">Congrates!</h3>
-                <div class="text-center mx-auto">
-                    <img src="images/coin.png" alt="" class="mx-auto">
-                </div>
-                <p class="py-4">You Have Donated for Humankind</p>
-                <p class="text-2xl">Successfully</p>
-                <div class="modal-action">
-                <form method="dialog" class="mx-auto">
-                    <button class="btn text-center">Close Confirmation</button>
-                </form>
-                </div>
+    <!-- Modal -->
+    <dialog id="my_modal_1" class="modal">
+        <div class="modal-box text-center">
+            <h3 class="text-3xl font-bold mb-4">Congrates!</h3>
+            <div class="text-center mx-auto">
+                <img src="images/coin.png" alt="" class="mx-auto">
             </div>
-        </dialog>
-
+            <p class="py-4">You Have Donated for Humankind</p>
+            <p class="text-2xl">Successfully</p>
+            <div class="modal-action">
+            <form method="dialog" class="mx-auto">
+                <button class="btn text-center">Close Confirmation</button>
+            </form>
+            </div>
+        </div>
+    </dialog>
+    <!-- Modal -->
 
      <script>
         document.getElementById('donationBtn').addEventListener('click', function(){
@@ -114,6 +101,5 @@
      </script>
      <script src="js/addDonation.js"></script>
      <script src="js/utilities.js"></script>
-      
 </body>
 </html>

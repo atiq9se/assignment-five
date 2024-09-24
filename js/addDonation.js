@@ -1,55 +1,41 @@
 document.getElementById('noakhaliDonationBtn').addEventListener('click', function(){
-   
     const mainBalance = getMainTextValueById('mainBalance');
-    console.log(mainBalance);
-    const noakhaliInputMoney = getInputValueById("noakhaliInputMoney");
-    console.log(noakhaliInputMoney);
 
-    if(mainBalance > 0 && mainBalance >= noakhaliInputMoney){
-        
+    const noakhaliInputMoney = getInputValueById("noakhaliInputMoney");
+
+    if(mainBalance > 0 && mainBalance >= noakhaliInputMoney){ 
         const newMainBalance = mainBalance - noakhaliInputMoney;
-        console.log(newMainBalance);
-        document.getElementById('mainBalance').innerText=newMainBalance;
+        document.getElementById('mainBalance').innerText=newMainBalance.toFixed(2);
 
         const noakhaliBalance = getTextValueById('noakhaliBalance');
-        console.log(noakhaliBalance);
-        const newNoakhaliBalance = noakhaliBalance + noakhaliInputMoney;
-        console.log(newNoakhaliBalance);
-        document.getElementById('noakhaliBalance').innerText=newNoakhaliBalance;
+        const newNoakhaliBalance = noakhaliBalance + noakhaliInputMoney;  
+        document.getElementById('noakhaliBalance').innerText=newNoakhaliBalance.toFixed(2);
         if( noakhaliInputMoney > 0){
             const noakhaliTitle = document.getElementById('noakhaliTitle').innerText;
             const historyText= history(noakhaliInputMoney, noakhaliTitle);
             document.getElementById('donationHistory').appendChild(historyText);
-
-           
         }
         my_modal_1.showModal()
-
-    }else{
-        alert('balance low')
+        return;
+    }
+    else{
+        alert('Invalid Donation amount')
     }
     
 })
 
 document.getElementById('feniDonationBtn').addEventListener('click', function(){
     const mainBalance = getMainTextValueById('mainBalance');
-    console.log(mainBalance);
 
-    if(mainBalance > 0){
-        const feniInputMoney = getInputValueById("feniInputMoney");
-        console.log(feniInputMoney);
+    const feniInputMoney = getInputValueById("feniInputMoney");
+
+    if(mainBalance > 0 && mainBalance >= feniInputMoney){
+        const newMainBalance = mainBalance - feniInputMoney;
+        document.getElementById('mainBalance').innerText=newMainBalance.toFixed(2);
 
         const feniBalance = getTextValueById('feniBalance');
-        console.log(feniBalance);
-
         const newFeniBalance = feniBalance + feniInputMoney;
-        console.log(newFeniBalance);
         document.getElementById('feniBalance').innerText= newFeniBalance;
-
-        const newBalance = mainBalance - feniInputMoney;
-        console.log(newBalance);
-        document.getElementById('mainBalance').innerText=newBalance;
-
         if(feniInputMoney > 0){
             const feniTitle = document.getElementById('feniTitle').innerText;
             const historyText = history(feniInputMoney, feniTitle);
@@ -57,32 +43,31 @@ document.getElementById('feniDonationBtn').addEventListener('click', function(){
         }
         my_modal_1.showModal()
     }
+    else{
+        alert('Invalid Donation amount')
+    }
 })
 
 document.getElementById('quotaDonationBtn').addEventListener('click', function(){
     const mainBalance = getMainTextValueById('mainBalance');
-    console.log(mainBalance);
 
-    if(mainBalance > 0){
-        const quotaInputMoney = getInputValueById("quotaInputMoney");
-        console.log(quotaInputMoney);
+    const quotaInputMoney = getInputValueById("quotaInputMoney");
+
+    if(mainBalance > 0 && mainBalance >= quotaInputMoney){
+        const newMainBalance = mainBalance - quotaInputMoney;
+        document.getElementById('mainBalance').innerText=newMainBalance;
 
         const quotaBalance = getTextValueById('quotaBalance');
-        console.log(quotaBalance);
-
         const newQuotaBalance = quotaBalance + quotaInputMoney;
-        console.log(newQuotaBalance);
         document.getElementById('quotaBalance').innerText = newQuotaBalance;
-
-        const newBalance = mainBalance - quotaInputMoney;
-        console.log(newBalance);
-        document.getElementById('mainBalance').innerText=newBalance;
-
         if(quotaInputMoney > 0){
             const quotaTitle = document.getElementById('quotaTitle').innerText;
             const historyText = history(quotaInputMoney, quotaTitle);
             document.getElementById('donationHistory').appendChild(historyText);
         }
         my_modal_1.showModal()
+    }
+    else{
+        alert('Invalid Donation amount')
     }
 })

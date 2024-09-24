@@ -6,4 +6,16 @@
     position: -webkit-sticky;
     position: sticky;
     top: 0px;
+    
+}
+.navbar{
+    background-color: #F9F7F3;
+}
+.btnSection{
+    background: #fff;
+}
+.modalShow{
+    pointer-events: auto;
+  visibility: visible;
+  opacity: 1;
 }

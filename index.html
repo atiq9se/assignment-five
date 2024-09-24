@@ -12,101 +12,89 @@
 
 </head>
 <body>
-
-    <section class="navbarSection lg:px-24 px-4 bg-slate-500">
-        <div class="flex justify-between flex-wrap">
-             <div class=""><a href="blog.html">Blog</a></div>
-             <div class="">Logo donation off the</div>
-             <div class="">Amount</div>
+    <!-- NAVBAR SECTION -->
+    <section class="navbarSection">
+        <div class="flex justify-between flex-wrap navbar lg:px-24 py-4">
+             <div class=""><a href="blog.html" class="px-5 py-2 w-full rounded border bg-lime-300 font-bold">Blog</a></div>
+             <div class=""><img src="images/logo.png" alt="" class="inline-block pr-4"><span class="font-bold"> Donate Bangladesh</span></div>
+             <div class=""><img src="images/coin.png" alt="" class="inline-block pr-2"> <span id="mainBalance">1000</span> BDT</div>
         </div>
-        <div class="flex justify-center gap-4 py-6">
+        <div class="flex justify-center gap-4 py-6 btnSection">
             <button class="px-5 py-2 rounded border border-slate-400 active" id="donationBtn">Donation</button>
             <button class="px-5 py-2 rounded border border-slate-400" id="historyBtn">History</button>
         </div>
-        
     </section>
+    <!-- NAVBAR SECTION -->
 
+    <!-- DONATION SECTION -->
     <section class="lg:px-24 px-4 mt-12" id="donationList">
-        <div class="donationItem grid lg:grid-cols-2 gap-8 grid-cols-1 lg:p-6 p-2 border rounded border-gray-200">
+        <div class="donationItem grid lg:grid-cols-2 gap-8 grid-cols-1 lg:p-6 p-2 border rounded border-gray-200 my-4">
             <div>
                 <img src="images/donation1.png" alt="" class="w-full">
             </div>
             <div>
-                <p class="bg-base-300 py-2 px-5 w-36 rounded"><img src="images/coin.png" alt="" class="inline-block"> 5000 BDT</p>
-                <h3 class="text-3xl font-bold py-4">title</h3>
-                <p class="text-xl text-justify">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto nisi similique numquam, iste fugit ducimus, enim provident blanditiis id velit pariatur ut soluta, commodi voluptas dolore quod error labore aliquam.</p>
-                <input class="block w-full my-5 p-3 rounded border border border-gray-200" type="text" placeholder="Write donation amount">
-                <button class="px-5 py-2 w-full rounded border bg-lime-300 font-bold">Donation now</button>
+                <p class="bg-base-300 py-2 px-5 w-40 rounded"><img src="images/coin.png" alt="" class="inline-block"> <span id="noakhaliBalance">5000</span> BDT</p>
+                <h3 class="text-2xl font-bold py-4" id="noakhaliTitle">Donate for Flood at Noakhali, Bangladesh</h3>
+                <p class="text-lg text-justify"> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
+                <input id="noakhaliInputMoney" class="block w-full my-5 p-2 rounded border border border-gray-200" type="text" placeholder="Write donation amount">
+                <button class="px-5 py-2 w-full rounded border bg-lime-300 font-bold" id="noakhaliDonationBtn">Donation now</button>
+            </div>
+        </div>
+        <div class="donationItem grid lg:grid-cols-2 gap-8 grid-cols-1 lg:p-6 p-2 border rounded border-gray-200 my-4">
+            <div>
+                <img src="images/donation3.png" alt="" class="w-full">
+            </div>
+            <div>
+                <p class="bg-base-300 py-2 px-5 w-36 rounded"><img src="images/coin.png" alt="" class="inline-block"> <span id="feniBalance">5000</span> BDT</p>
+                <h3 class="text-2xl font-bold py-4" id="feniTitle">Donate for Flood Relief in Feni,Bangladesh</h3>
+                <p class="text-lg text-justify">The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.</p>
+                <input id="feniInputMoney" class="block w-full my-5 p-2 rounded border border border-gray-200" type="text" placeholder="Write donation amount">
+                <button class="px-5 py-2 w-full rounded border bg-lime-300 font-bold" id="feniDonationBtn">Donation now</button>
+            </div>
+        </div>
+        <div class="donationItem grid lg:grid-cols-2 gap-8 grid-cols-1 lg:p-6 p-2 border rounded border-gray-200 my-4">
+            <div>
+                <img src="images/donation2.png" alt="" class="w-full">
+            </div>
+            <div>
+                <p class="bg-base-300 py-2 px-5 w-36 rounded"><img src="0" alt="" class="inline-block"><img src="images/coin.png" alt="" class="inline-block"> <span id="quotaBalance">5000</span> BDT</p>
+                <h3 class="text-2xl font-bold py-4" id="quotaTitle">Aid for Injured in the Quota Movement</h3>
+                <p class="text-lg text-justify">The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.</p>
+                <input id="quotaInputMoney" class="block w-full my-5 p-2 rounded border border border-gray-200" type="text" placeholder="Write donation amount">
+                <button class="px-5 py-2 w-full rounded border bg-lime-300 font-bold" id="quotaDonationBtn">Donation now</button>
             </div>
         </div>
     </section>
+    <!-- DONATION SECTION -->
 
+    <!-- HISTORY SECTION -->
     <section class="px-24 hidden mt-12" id="donationHistory">
-        <div class="p-4 border rounded border-gray-200 mt-3">
+      <h3>Donation History List</h3>
+        <!-- <div class="p-4 border rounded border-gray-200 mt-3">
             <h3 class="text-xl font-bold text-black"> 100 donated donation for Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni, tempora!</h3>
             <p class="text-sm mt-2">Date: 12/12/23</p>
-        </div>
-        <div class="p-4 border rounded border-gray-200 mt-3">
-            <h3 class="text-xl text-black"> 100 donated donation for Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni, tempora!</h3>
-            <p class="text-sm text-gray">date: 12/12/23</p>
-        </div>
-        <div class="p-4 border rounded border-gray-200 mt-3">
-            <h3 class="text-xl"> 100 donated donation for Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni, tempora!</h3>
-            <p class="text-sm">date: 12/12/23</p>
-        </div>
-        <div class="p-4 border rounded border-gray-200 mt-3">
-            <h3 class="text-xl"> 100 donated donation for Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni, tempora!</h3>
-            <p class="text-sm">date: 12/12/23</p>
-        </div>
+        </div> -->
     </section>
+    <!-- HISTORY SECTION -->
 
-   
-    <!-- accordian -->
-     <section class="py-7 px-24">
-        <div class="collapse collapse-arrow bg-base-200 mb-4">
-            <input type="radio" name="my-accordion-2" checked="checked" />
-            <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
-            <div class="collapse-content">
-                <p>hello</p>
-            </div>
-        </div>
-        <div class="collapse collapse-arrow bg-base-200 mb-4">
-            <input type="radio" name="my-accordion-2" />
-            <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
-            <div class="collapse-content">
-                <p>hello</p>
-            </div>
-        </div>
-        <div class="collapse collapse-arrow bg-base-200 mb-4">
-            <input type="radio" name="my-accordion-2" />
-            <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
-            <div class="collapse-content">
-                <p>hello</p>
-            </div>
-        </div>
-        <div class="collapse collapse-arrow bg-base-200 mb-4">
-            <input type="radio" name="my-accordion-2" />
-            <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
-            <div class="collapse-content">
-                <p>hello</p>
-            </div>
-        </div>
-
-        <!-- Open the modal using ID.showModal() method -->
-        <button class="btn" onclick="my_modal_1.showModal()">open modal</button>
+     <!-- Open the modal using ID.showModal() method -->
+        <!-- <button class="btn" onclick="my_modal_1.showModal()">open modal</button> -->
         <dialog id="my_modal_1" class="modal">
-        <div class="modal-box">
-            <h3 class="text-lg font-bold">Hello!</h3>
-            <p class="py-4">Press ESC key or click the button below to close</p>
-            <div class="modal-action">
-            <form method="dialog">
-                <!-- if there is a button in form, it will close the modal -->
-                <button class="btn">Close</button>
-            </form>
+            <div class="modal-box text-center">
+                <h3 class="text-3xl font-bold mb-4">Congrates!</h3>
+                <div class="text-center mx-auto">
+                    <img src="images/coin.png" alt="" class="mx-auto">
+                </div>
+                <p class="py-4">You Have Donated for Humankind</p>
+                <p class="text-2xl">Successfully</p>
+                <div class="modal-action">
+                <form method="dialog" class="mx-auto">
+                    <button class="btn text-center">Close Confirmation</button>
+                </form>
+                </div>
             </div>
-        </div>
         </dialog>
-     </section>
+
 
      <script>
         document.getElementById('donationBtn').addEventListener('click', function(){
@@ -118,6 +106,8 @@
             document.getElementById('donationHistory').style.display = "block";
         })
      </script>
+     <script src="js/addDonation.js"></script>
+     <script src="js/utilities.js"></script>
       
 </body>
 </html>
